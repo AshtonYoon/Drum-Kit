@@ -1,0 +1,70 @@
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow:hidden;
+  background-color: #DA4453;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  $max: 750px;
+  position: relative;
+  max-width: $max;
+  min-width: 550px;
+  max-height: $max;
+  height: 100%;
+  margin: 0 auto;
+  // border: 1px solid red;
+}
+
+// eyes
+//----------------
+$er: 150px;
+$pr: 50px;
+.eye {
+  position: absolute;
+  width: $er;
+  height: $er;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  overflow:hidden;
+  
+  &#left {
+    left: 15%;
+  }
+  
+  &#right {
+    right: 15%;
+  }
+  
+  &.shadow {
+    box-shadow: 0 -2px 3px rgba(0,0,0,0.5);
+  }
+}
+
+.pupil {
+  position:absolute;
+  width: $pr;
+  height: $pr;
+  background-color: black;
+  border-radius: 50%;
+  transition: all .05s linear;
+  transform: translateY( ($er - $pr) / 2 ) 
+             translateX( ($er - $pr) / 2);
+}
+
+.lid {
+  position: absolute;
+  top: -95%;
+  height: 110%;
+  width: 100%;
+  background-color: darken(#DA4453,15);
+  transition: all .025s linear;
+}

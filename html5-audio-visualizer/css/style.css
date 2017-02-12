@@ -1,0 +1,71 @@
+html, body {
+    font-family: helvetica, arial, sans-serif;
+    background-color: #DA4453;
+    color: #fefefe;
+}
+
+#fileWrapper {
+	transition: all 0.5s ease;
+}
+
+#fileWrapper:hover {
+	opacity: 1 !important;
+}
+
+.alien {
+    left: 80%;
+	width: 240px;
+    height: 360px;
+    position: fixed;
+}
+
+#top{
+    z-index: 9;
+}
+
+#bottom{
+    height: 144.8px;
+    z-index: 10;
+    top: 35vh;
+}
+
+img[id*="planet"]{
+    position: fixed;
+    z-index: 8;
+}
+
+.hvr-float {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-float:hover, .hvr-float:focus, .hvr-float:active {
+  -webkit-transform: translateY(-8px);
+  transform: translateY(-8px);
+}
+
+.hvr-sink {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sink:hover, .hvr-sink:focus, .hvr-sink:active {
+  -webkit-transform: translateY(58px);
+  transform: translateY(58px);
+}

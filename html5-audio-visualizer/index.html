@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Audio Visualizer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/file-upload.css">
+</head>
+<body id="Visualizer">
+    <img src="media/alienTop.png" class="alien" id="top">
+    <img src="media/alienBottom.png" class="alien hvr-sink" id="bottom">
+    <img src="media/planet1.svg" id="planet1" style="margin-top:500px;left:800px;width:50px;height:50px;" class="hvr-float">
+    <img src="media/planet2.svg" id="planet2" style="margin-top:100px;left:1316px;width:50px;height:50px;" class="hvr-float">
+    <img src="media/planet3.svg" id="planet3" style="margin-top:550px;left:1066px;width:80px;height:80px;" class="hvr-float">
+    <img src="media/jupiter.svg" id="planet3" style="margin-top:550px;left:1066px;width:80px;height:80px;" class="hvr-float">
+    <img src="media/neptune.svg" id="planet3" style="margin-top:50px;left:800px;width:150px;height:150px;" class="hvr-float">
+    <img src="media/uranus.svg" id="planet3" style="margin-top:380px;left:100px;width:120px;height:120px;" class="hvr-float">
+    <img src="media/venus.svg" id="planet3" style="margin-top:600px;left:683px;width:80px;height:80px;" class="hvr-float">
+
+  <div id="fileWrapper" class="file_wrapper">
+    <div id="info"></div>
+    <div class="fileUpload">
+      <span><i class="fa fa-plus-circle"></i> Add File</span>
+      <input type="file" class="upload" id="uploadedFile" name="files" multiple/>
+    </div>
+    <ul id="selectedFiles"></ul>
+  </div>
+
+  <div id="visualizer_wrapper">
+    <canvas id='canvas' width="400" height="350"></canvas>
+  </div>
+  <script src="C:\Users\윤여환\Desktop\공모전\eyes-following-mouse\js\jquery.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/file-upload.js"></script>
+  <script>
+    var $bottom = $("#bottom");
+    $bottom.hover(function(){
+      $(this).filter(':not(:animated)').animate({},'fast', function(){
+          $('.fileUpload').animate({
+              left: '75%',
+            }, 'fast');
+        });
+    },
+    function() {
+      $(this).animate({
+        'z-index': '10'
+      },'fast');
+    });
+  </script>
+</body>
+
+</html>
